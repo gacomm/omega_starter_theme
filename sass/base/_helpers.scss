@@ -1,0 +1,109 @@
+._small,
+.small {
+  font-size: $small;
+}
+
+._smaller,
+.smaller {
+  font-size: $smaller;
+}
+
+._smallest,
+.smallest,
+.disclaimer {
+  font-size: $smallest;
+}
+
+._left{
+  float: left;
+}
+
+._right{
+  float: right;
+}
+
+._center{
+  text-align: center;
+}
+
+.center-mobile {
+  text-align: center;
+}
+
+@include at-breakpoint($tab) {
+  .center-mobile {
+    text-align: left;
+  }
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.offScreen {
+  position: absolute;
+  left: -99999px;
+  top: -999999px;
+}
+
+.mid {
+  margin: 0 auto;
+}
+
+.clearfix, .clear {
+  clear: both;
+}
+
+.no-mobile {
+  display: none;
+  @include at-breakpoint($tab) {
+    display: block;
+  }
+}
+
+.no-tablet {
+  @include at-breakpoint($tab) {
+    display: none;
+  }
+}
+
+.no-desktop {
+  @include at-breakpoint($desk) {
+    display: none;
+  }
+}
+
+.stretch {
+  margin: 0 -$horz-spacing-unit;
+}
+
+.stretch-mobile {
+  margin-left: -$horz-spacing-unit;
+  margin-right: -$horz-spacing-unit;
+}
+
+@include at-breakpoint($tab) {
+  .stretch-mobile {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .stretch-tablet {
+    margin-left: -$horz-spacing-unit;
+    margin-right: -$horz-spacing-unit;
+  }
+}
+
+@include at-breakpoint($desk) {
+  .stretch-mobile {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .stretch-tablet {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
